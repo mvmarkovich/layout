@@ -1,0 +1,28 @@
+.container
+  max-width: 100%
+  margin: * auto
+  padding: 0 16px @md 0 32px
+
+@media $lg
+  .container
+    max-width: $container-lg-px
+
+@media $xl
+  .container
+    max-width: $container-xl-px
+
+.content-container
+  display: @md flex
+  justify-content: @md space-between
+  position: relative
+  width: 100%
+  margin: 20px 0
+
+.sidebar
+  width: 100% @md 270px @lg 300px
+  min-width: @md 270px @lg 300px
+  margin: @md 0 0 0 20px
+
+.main-container
+  max-width: 960px
+  width: 100%

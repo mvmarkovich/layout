@@ -1,0 +1,48 @@
+.modal
+  position: fixed 0 0 0 0
+  background: $cover-color
+  justify-content: center
+  z-index: 99990
+  display: none
+  overflow: auto
+  opacity: 0
+  transition: .3s ease
+
+  &--tiny
+    ^&__square
+      max-width: 500px
+
+  &--open
+    display: flex
+
+  &--fadeIn
+    opacity: 1
+
+    ^&__item, ^&__square
+      transform: translateY(0) scale(1)
+
+    ^&__square-img
+      transform: translateY(0) scale(1)
+      transition-delay: 0s
+
+  &__item, &__square
+    transform: translateY(-10px) scale(.98)
+    transition: .3s ease
+
+  &__close
+    position: absolute null 8px null null
+    top: 10px @md 16px
+
+  &__square
+    size: auto
+    overflow: hidden
+    box: vertical left @md horizontal
+    margin: auto
+    display: none
+    max-width: 640px
+    width: 100%
+
+    &-content
+      background: #fff
+      width: 100%
+      padding: 24px 16px @md 28px 40px

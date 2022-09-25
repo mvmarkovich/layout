@@ -1,0 +1,106 @@
+.btns-spacer
+  display: flex
+  flex-wrap: wrap
+
+  & > *
+    margin: 0 16px 0 0
+
+    &:last-child
+      margin: 0
+
+.form
+  &__row
+    display: @md flex
+    margin: @md 12px -25px 0
+
+    .form__col
+      width: @md 50%
+      padding: @md 0 25px
+
+  &__send
+    margin: 24px 0 0 @md 32px 0 0
+    display: flex
+    justify-content: flex-end
+
+.input
+  margin-bottom: 20px
+  position: relative
+
+  &__label
+    text-transform: uppercase
+    letter-spacing: .2em
+    text: 400 12px 1.3
+    margin: 0 0 6px
+    display: block
+
+  &__elem
+    position: relative
+    border: none
+    background: #F2F5F5
+    min-height: 48px
+    padding: 0 16px @md 0 42px
+    outline: 0
+    font-family: $font
+    text: #231F20 500 16px 1.4
+    width: 100%
+    resize: none
+
+    &:active,
+    &:focus
+      &::placeholder
+        text: transparent
+
+      ~^&-placeholder
+        visibility: hidden
+        opacity: 0
+
+    &-placeholder
+      text: #999 16px 1.2 @md 24px
+      text-transform: uppercase
+      letter-spacing: .2em
+      position: absolute
+      top: 0
+      transition: .2s
+      padding: 0 16px @md 0 42px
+      width: 100%
+      height: 100%
+      display: flex
+      align-items: center
+
+    &.has-content
+      ~.input__elem-placeholder
+        visibility: hidden
+        opacity: 0
+
+  &__checkbox
+    display: none
+
+    &:checked
+
+      & + ^&-label
+        &:before
+          background-color: #4C446D
+
+    &-label
+      cursor: pointer
+      user-select: none
+      text: #263238 500 16px 1.2
+      display: block
+
+      &:before
+        content: ""
+        float: left
+        display: block
+        size: 28px
+        margin: 0 12px 0 0
+        position: relative
+        top: -4px
+        background-color: #f2f5f5
+        background-position: center
+        background-repeat: no-repeat
+        background-size: 20px
+
+textarea.input__elem
+  min-height: 134px
+  padding: 16px *
+

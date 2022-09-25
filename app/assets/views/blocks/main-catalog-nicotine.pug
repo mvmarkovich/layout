@@ -1,0 +1,26 @@
+section.catalog
+    .container
+        .title__block
+            h2 SALT SWITCH FLAVOURS
+
+        .catalog__row
+            each item, i in mainCatalogNicotine
+                .product
+                    .product__inner
+                        a.product__link(href="cart-product.html" title="go")
+
+                        .product__img-wrap
+                            img(src= item.src width="" height="" alt= item.title)
+
+                        .product__title= item.title
+
+                        .price
+                            .price__now £5.58
+
+                            if item.oldPrice
+                                .price__old= item.priceOld
+
+                        a.btn.btn--accent(href="#") Add to Cart
+
+        .btn--block.btn--center
+            a.btn.btn--border(href="catalog-nicotine.html") Show more

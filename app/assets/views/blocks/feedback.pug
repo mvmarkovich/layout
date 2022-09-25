@@ -1,0 +1,27 @@
+section.feeadback.bg--purple
+    .container
+        .title__block
+            h2 FEEL FREE TO CONTACT <br> US WITH ANY QUESTIONS
+
+        form.form.feedback__form(action="/" method="/")
+            .form__row
+                .form__col
+                    .input.input--placeholder
+                        input.input__elem(type="text" name="name")
+                        .input__elem-placeholder Name
+                        .input__elem-bg
+
+                    .input.input--placeholder
+                        input.input__elem(type="text" name="email")
+                        .input__elem-placeholder E-mail
+                        .input__elem-bg
+
+                .form__col
+                    .input.input--placeholder.input--textarea
+                        textarea.input__elem(name="massage")
+                        .input__elem-placeholder Type YOUR <br> QUESTION here
+                        .input__elem-bg
+
+            .form__send
+                button.btn.btn--white(type="submit") Submit
+
